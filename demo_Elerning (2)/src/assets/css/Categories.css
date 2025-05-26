@@ -1,0 +1,99 @@
+/* Root variables (if not already defined elsewhere) */
+:root {
+    --primary: #fb873f;
+    --dark: #333;
+}
+
+/* Categories Section Styling */
+.category-section .section-title {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.category-section .section-heading {
+    color: #fb873f;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.category-card img {
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.category-link:hover {
+    color: #fb873f;
+}
+
+/* Additional Category Hover & Animation Styles */
+.category .content {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.category .content:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.category .content h5 a {
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.3s ease-in-out;
+}
+
+.category .content:hover h5 a {
+    color: #fff !important;
+}
+
+.category img {
+    width: 50px;
+    height: 50px;
+}
+
+.category img,
+.course-item img {
+    transition: 0.5s;
+}
+
+.category a:hover img,
+.course-item:hover img {
+    transform: scale(1.1);
+    margin-top: -10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .category-section .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .category-card img {
+        max-height: 100px;
+    }
+}

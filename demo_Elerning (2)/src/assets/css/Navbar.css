@@ -1,0 +1,128 @@
+/* Basic reset */
+.navbar {
+  display: flex;
+  height: 10%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: -10px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand .brand-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-icon {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brand-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.brand-highlight {
+  color: #e22c1f;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.dropdown-item:hover,
+.dropdown-toggle:hover {
+  color: #fb873f;
+  background-color: rgba(251, 135, 63, 0.1);
+  border-radius: 4px;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  min-width: 150px;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.dropdown-content .dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content .dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.translate-box {
+  min-width: 100px;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive menu toggle for small screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  /* Show menu when active */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

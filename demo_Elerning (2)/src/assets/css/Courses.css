@@ -1,0 +1,193 @@
+/* General section padding/background */
+.courses-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f8f9fa; /* Light background for the section */
+  }
+  
+  /* Section Title and Heading */
+  .courses-section .section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fb873f; /* Your brand color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    /* Bootstrap's bg-white and px-3 are already there */
+  }
+  
+  .courses-main-heading {
+    font-size: 2.5rem; /* Larger heading */
+    font-weight: 700;
+    color: #343a40; /* Darker text color, overriding the inline style for #fb873f if it's not the primary heading color */
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+  
+  /* Course Item Card */
+  .course-item {
+    background-color: #fff;
+    border-radius: 8px; /* Slight roundness */
+    overflow: hidden; /* Ensures image corners match card corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    height: 100%; /* Ensures all cards in a row have consistent height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .course-item:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  }
+  
+  .course-image-container {
+    height: 200px; /* Fixed height for course images */
+    overflow: hidden;
+    position: relative; /* Needed for absolute positioning of type badge */
+    display: flex; /* For centering the image vertically if it's smaller than container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .course-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Covers the area without distortion, cropping if necessary */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+  }
+  
+  .course-item:hover .course-image-container img {
+    transform: scale(1.1); /* Slightly zoom image on card hover */
+  }
+  
+  .course-type-badge {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: #fff; /* White text for the badge */
+  }
+  
+  .course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px; /* Space between title and details */
+    min-height: 50px; /* Ensure consistent height for titles across cards */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .course-title a {
+    color: #343a40;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .course-title a:hover {
+    color: #fb873f; /* Your brand color on hover */
+  }
+  
+  .course-details {
+    border-top: 1px solid #e9ecef; /* Light divider line */
+    border-bottom: 1px solid #e9ecef;
+    margin-top: 10px; /* Space from title */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-grow: 1; /* Allows details section to take up available space */
+    align-items: center; /* Vertically align content within the flex container */
+  }
+  
+  .course-details small {
+    color: #6c757d; /* Muted text color for details */
+    font-size: 0.875rem;
+  }
+  
+  .course-details i {
+    color: #6c757d; /* Icon color */
+  }
+  
+  .course-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center; /* Vertically align content */
+  }
+  
+  .course-footer small {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  .course-footer .fw-bold {
+    color: #343a40; /* Price color */
+  }
+  
+  .course-enroll-link a {
+    color: #0d6efd; /* Bootstrap primary blue, adjust to your brand color if different */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .course-enroll-link a:hover {
+    color: #fb873f; /* Your brand color on hover */
+  }
+  
+  /* All Courses Button */
+  .all-courses-btn {
+    background-color: #fb873f; /* Your brand color */
+    border-color: #fb873f; /* Match border color */
+    color: #fff !important; /* Ensure text is white */
+    font-weight: 600;
+    border-radius: 50px; /* Pill shape */
+    min-width: 200px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .all-courses-btn:hover {
+    background-color: #e06c27; /* Slightly darker shade on hover */
+    border-color: #e06c27;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    .courses-main-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .courses-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .courses-main-heading {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .course-item {
+      margin-bottom: 20px; /* Add some space between cards on smaller screens */
+    }
+    .course-image-container {
+      height: 180px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .courses-main-heading {
+      font-size: 1.5rem;
+    }
+    .course-details small {
+      font-size: 0.8rem; /* Smaller text for details */
+    }
+    .course-footer small {
+      font-size: 0.85rem;
+    }
+    .all-courses-btn {
+      padding: 10px 30px;
+      font-size: 0.9rem;
+      min-width: unset;
+    }
+  }
